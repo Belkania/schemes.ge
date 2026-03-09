@@ -32,8 +32,24 @@ export default async function Services({
                     <div className="w-24 h-1 bg-[var(--color-primary)] mx-auto mt-8 rounded"></div>
                 </div>
 
+                {/* Main Featured Service */}
+                <div className="mb-16">
+                    <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-blue-100 flex flex-col md:flex-row items-center gap-8 hover:shadow-2xl transition-all duration-500">
+                        <div className="w-24 h-24 bg-blue-50 rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <Route className="w-12 h-12 text-[var(--color-primary)]" />
+                        </div>
+                        <div className="flex-grow text-center md:text-left">
+                            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{services[0].title}</h2>
+                            <p className="text-gray-600 text-lg leading-relaxed max-w-3xl">
+                                {services[0].desc}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Other Services Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                    {services.map((service, idx) => (
+                    {services.slice(1).map((service, idx) => (
                         <div key={idx} className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 hover:shadow-xl hover:-translate-y-2 group transition-all duration-300">
                             <div className="w-16 h-16 bg-blue-50 group-hover:bg-[var(--color-primary)] rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
                                 <div className="text-[var(--color-primary)] group-hover:text-emerald-400 mix-blend-luminosity">
