@@ -1,5 +1,5 @@
 import { getDictionary } from '../../../lib/dictionary';
-import { Settings, ShieldAlert, FileText, CheckSquare, Lightbulb, Truck, Droplets, Droplet } from 'lucide-react';
+import { CheckCircle, Shield, FileText, ArrowRight, Route, AlertTriangle, Briefcase, Map, Truck, Droplets, Cog } from 'lucide-react';
 
 export default async function Services({
     params,
@@ -10,46 +10,14 @@ export default async function Services({
     const dict = await getDictionary(lang as any);
 
     const services = [
-        {
-            title: 'სატრანსპორტო ორგანიზების სქემების მომზადება',
-            icon: <Settings className="w-8 h-8 text-[var(--color-primary)]" />,
-            desc: 'მუდმივი და დროებითი საგზაო მოძრაობის სრული დაგეგმარება და პროექტირება.'
-        },
-        {
-            title: 'დროებითი საგზაო სქემების მომზადება',
-            icon: <ShieldAlert className="w-8 h-8 text-[var(--color-primary)]" />,
-            desc: 'სამშენებლო და სარეაბილიტაციო სამუშაოების დროს უსაფრთხოდ გადაადგილების სქემები.'
-        },
-        {
-            title: 'სამუშოების წარმოების აქტის შედგენა',
-            icon: <FileText className="w-8 h-8 text-[var(--color-primary)]" />,
-            desc: 'ტექნიკური დოკუმენტაციის მომზადება მერიის მოთხოვნების შესაბამისად.'
-        },
-        {
-            title: 'საგზაო სქემების შეთანხმება',
-            icon: <CheckSquare className="w-8 h-8 text-[var(--color-primary)]" />,
-            desc: 'ოფიციალური შეთანხმება საპატრულო პოლიციასთან და ტრანსპორტის სააგენტოსთან.'
-        },
-        {
-            title: 'კონსულტაცია პროექტირების და ურბანული დაგეგმვის საკითხებში',
-            icon: <Lightbulb className="w-8 h-8 text-[var(--color-primary)]" />,
-            desc: 'რეკომენდაციები და პროფესიონალური საინჟინრო კონსულტაცია გაბარიტებისა და ნორმების დაცვით.'
-        },
-        {
-            title: 'სამშენებლო ტექნიკის დროებითი მოძრაობის სქემები',
-            icon: <Truck className="w-8 h-8 text-[var(--color-primary)]" />,
-            desc: 'განსაკუთრებით დიდი ზომის ტექნიკისთვის მარშრუტის დაგეგმარება ქალაქის მასშტაბით.'
-        },
-        {
-            title: 'წყალსადენის ქსელის მოწყობა',
-            icon: <Droplet className="w-8 h-8 text-[var(--color-primary)]" />,
-            desc: 'წყალსადენის ქსელის მოწყობისას გზის გადათხრის სქემები და ნებართვები.'
-        },
-        {
-            title: 'წყალარინების ქსელის მოწყობა',
-            icon: <Droplets className="w-8 h-8 text-[var(--color-primary)]" />,
-            desc: 'კანალიზაციის ქსელის სარეაბილიტაციო სამუშაოების საგზაო უზრუნველყოფა.'
-        }
+        { title: dict.services.list[0].title, desc: dict.services.list[0].desc, icon: <Route className="w-8 h-8" /> },
+        { title: dict.services.list[1].title, desc: dict.services.list[1].desc, icon: <AlertTriangle className="w-8 h-8" /> },
+        { title: dict.services.list[2].title, desc: dict.services.list[2].desc, icon: <FileText className="w-8 h-8" /> },
+        { title: dict.services.list[3].title, desc: dict.services.list[3].desc, icon: <Briefcase className="w-8 h-8" /> },
+        { title: dict.services.list[4].title, desc: dict.services.list[4].desc, icon: <Map className="w-8 h-8" /> },
+        { title: dict.services.list[5].title, desc: dict.services.list[5].desc, icon: <Truck className="w-8 h-8" /> },
+        { title: dict.services.list[6].title, desc: dict.services.list[6].desc, icon: <Droplets className="w-8 h-8" /> },
+        { title: dict.services.list[7].title, desc: dict.services.list[7].desc, icon: <Cog className="w-8 h-8" /> }
     ];
 
     return (
@@ -57,11 +25,11 @@ export default async function Services({
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div className="text-center mb-16">
-                    <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{dict.navigation.services}</h1>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-4">
-                        პროფესიონალური მომსახურება, რომელიც მოიცავს ყველა სახის საგზაო-სატრანსპორტო პროექტირებასა და შეთანხმებას.
+                    <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">{dict.navigation.services}</h1>
+                    <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+                        {dict.services.subtitle}
                     </p>
-                    <div className="w-24 h-1 bg-[var(--color-primary)] mx-auto rounded"></div>
+                    <div className="w-24 h-1 bg-[var(--color-primary)] mx-auto mt-8 rounded"></div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -82,9 +50,9 @@ export default async function Services({
                     <div className="absolute top-0 right-0 -mt-16 -mr-16 w-64 h-64 bg-[var(--color-primary-dark)] rounded-full opacity-20 blur-3xl"></div>
                     <div className="absolute bottom-0 left-0 -mb-16 -ml-16 w-48 h-48 bg-amber-500 rounded-full opacity-10 blur-3xl"></div>
                     <div className="relative z-10">
-                        <h2 className="text-2xl sm:text-3xl font-bold mb-4">გჭირდებათ პროექტის შეთანხმება?</h2>
+                        <h2 className="text-2xl sm:text-3xl font-bold mb-4">{dict.services.ctaTitle}</h2>
                         <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-                            დაგვიკავშირდით და მიიღეთ სრული იურიდიული და ტექნიკური კონსულტაცია საპატრულო პოლიციასთან და თბილისის მუნიციპალიტეტის ტრანსპორტისა და ურბანული განვითარების სააგენტოსთან.
+                            {dict.services.ctaDesc}
                         </p>
                         <a
                             href={`/${lang}/contact`}

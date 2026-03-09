@@ -1,6 +1,6 @@
 import { getDictionary } from '../../lib/dictionary';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, MapPin, ShieldCheck, Building2 } from 'lucide-react';
+import { ArrowRight, CheckCircle, MapPin, ShieldCheck, Building2, Award, Clock } from 'lucide-react';
 
 export default async function Home({
   params,
@@ -51,22 +51,22 @@ export default async function Home({
               <div className="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-4">
                 <ShieldCheck className="w-8 h-8 text-[var(--color-primary)]" />
               </div>
-              <h3 className="text-xl font-bold mb-2">ოფიციალური შეთანხმება</h3>
-              <p className="text-gray-600">სრული იურიდიული მხარდაჭერა და შეთანხმება მერიასა და საპატრულო პოლიციასთან.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{dict.home.features[0].title}</h3>
+              <p className="text-gray-600">{dict.home.features[0].desc}</p>
             </div>
             <div className="p-6">
               <div className="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-4">
-                <Building2 className="w-8 h-8 text-[var(--color-primary)]" />
+                <Award className="w-8 h-8 text-[var(--color-primary)]" />
               </div>
-              <h3 className="text-xl font-bold mb-2">პროფესიონალური მიდგომა</h3>
-              <p className="text-gray-600">ISO სტანდარტების და ადგილობრივი რეგულაციების სრული დაცვით შექმნილი პროექტები.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{dict.home.features[1].title}</h3>
+              <p className="text-gray-600">{dict.home.features[1].desc}</p>
             </div>
             <div className="p-6">
               <div className="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-4">
-                <MapPin className="w-8 h-8 text-[var(--color-primary)]" />
+                <Clock className="w-8 h-8 text-[var(--color-primary)]" />
               </div>
-              <h3 className="text-xl font-bold mb-2">მთელი საქართველოს მასშტაბით</h3>
-              <p className="text-gray-600">ვემსახურებით კლიენტებს თბილისში და რეგიონებში უმოკლეს ვადებში.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{dict.home.features[2].title}</h3>
+              <p className="text-gray-600">{dict.home.features[2].desc}</p>
             </div>
           </div>
         </div>
@@ -77,18 +77,14 @@ export default async function Home({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{dict.navigation.services}</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">გთავაზობთ საგზაო ინფრასტრუქტურის სრულ საპროექტო მომსახურებას.</p>
+            <div className="w-24 h-1 bg-[var(--color-primary)] mx-auto rounded mb-6"></div>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+              {dict.home.servicesTitle}
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              "სატრანსპორტო ორგანიზების სქემების მომზადება",
-              "დროებითი საგზაო სქემების მომზადება",
-              "სამუშოების წარმოების აქტის შედგენა",
-              "საგზაო სქემების შეთანხმება",
-              "კონსულტაცია პროექტირების საკითხებში",
-              "სამშენებლო ტექნიკის მოძრაობის სქემები"
-            ].map((service, index) => (
+            {(dict.home.servicesList as string[]).map((service, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 border border-slate-200 transition-all duration-300 flex items-start group">
                 <CheckCircle className="w-6 h-6 text-amber-500 mt-1 mr-4 flex-shrink-0 group-hover:scale-110 transition-transform" />
                 <span className="text-gray-800 font-medium">{service}</span>
@@ -96,12 +92,12 @@ export default async function Home({
             ))}
           </div>
 
-          <div className="text-center mt-10">
+          <div className="mt-12 text-center">
             <Link
               href={`/${lang}/services`}
-              className="inline-flex items-center text-[var(--color-primary)] font-semibold hover:text-[var(--color-primary-dark)] transition-colors"
+              className="inline-flex items-center text-[var(--color-primary)] font-semibold hover:text-[var(--color-primary-dark)]"
             >
-              სრული სერვისების ნახვა <ArrowRight className="ml-2 w-4 h-4" />
+              {dict.home.viewAllServices} <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
           </div>
         </div>
