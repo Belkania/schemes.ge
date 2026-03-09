@@ -49,7 +49,7 @@ const blogData: Record<string, any> = {
                     <strong>მოძრაობის სქემის შეთანხმება</strong> საკმაოდ რთული და მრავალეტაპიანი პროცესია, რომელიც მოითხოვს კანონმდებლობისა და უსაფრთხოების ნორმების ზედმიწევნით ცოდნას.
                 </p>
                 <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">შეთანხმების ძირითადი ეტაპები:</h2>
-                <div className="bg-slate-50 p-6 rounded-lg mb-8 border border-gray-100">
+                <div className="bg-white p-6 rounded-2xl mb-8 border border-slate-200 shadow-sm">
                     <ol className="list-decimal pl-6 space-y-4 text-gray-700">
                         <li><strong>ტოპოგრაფიული გეგმის მომზადება:</strong> ტერიტორიის ზუსტი კვლევა.</li>
                         <li><strong>სატრანსპორტო ორგანიზების სქემების შედგენა:</strong> ნახაზების შექმნა საინჟინრო სტანდარტებით.</li>
@@ -105,7 +105,7 @@ const blogData: Record<string, any> = {
                     საქართველოში ნებისმიერი <strong>სატრანსპორტო ორგანიზების სქემა</strong> ფინალურ ეტაპზე მოითხოვს საპატრულო პოლიციასთან შეთანხმებას. ეს პროცესი გულისხმობს დეტალური პაკეტის მომზადებას.
                 </p>
                 <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">საჭირო დოკუმენტაციების სია:</h2>
-                <div className="bg-slate-50 p-6 rounded-lg mb-8 border border-gray-100">
+                <div className="bg-white p-6 rounded-2xl mb-8 border border-slate-200 shadow-sm">
                     <ul className="space-y-4 text-gray-700">
                         <li className="flex items-center">
                             <div className="w-2 h-2 bg-[var(--color-primary)] rounded-full mr-3"></div>
@@ -176,8 +176,8 @@ export default async function BlogPost({
     }
 
     return (
-        <div className="bg-white min-h-screen py-12 md:py-20 lg:py-24">
-            <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-slate-50 min-h-screen py-12 md:py-20 lg:py-24 border-t border-slate-200">
+            <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white p-8 md:p-12 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-200">
 
                 <Link
                     href={`/${lang}/blog`}
@@ -202,7 +202,7 @@ export default async function BlogPost({
                                 <User className="w-5 h-5 mr-2" />
                                 <span>Schemes.ge - საინჟინრო გუნდი</span>
                             </div>
-                            <span className="bg-slate-50 text-[var(--color-primary)] px-3 py-1 rounded-full text-sm font-medium border border-gray-100">
+                            <span className="text-sm font-bold text-slate-800 bg-amber-200/50 px-3 py-1 rounded-full border border-amber-300">
                                 {post.keyword}
                             </span>
                         </div>
@@ -212,15 +212,18 @@ export default async function BlogPost({
                         {post.content}
                     </div>
 
-                    <footer className="mt-16 pt-8 border-t border-gray-100 text-center bg-slate-50 rounded-2xl p-8">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-4">გჭირდებათ დახმარება?</h3>
-                        <p className="text-gray-600 mb-6">ჩვენ გაგიწევთ სრულ პროფესიონალურ მომსახურებას ნებისმიერი სირთულის საგზაო მოძრაობის სქემის მომზადებასა და შეთანხმებაში.</p>
-                        <Link
-                            href={`/${lang}/contact`}
-                            className="inline-flex justify-center items-center px-8 py-3 text-base font-medium rounded-md bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-dark)] transition-colors"
-                        >
-                            დაგვიკავშირდით უფასო კონსულტაციისთვის
-                        </Link>
+                    <footer className="mt-16 pt-8 border-t border-slate-200 text-center bg-slate-900 rounded-2xl p-8 relative overflow-hidden">
+                        <div className="absolute top-0 right-0 -mt-16 -mr-16 w-64 h-64 bg-[var(--color-primary-dark)] rounded-full opacity-20 blur-3xl"></div>
+                        <div className="relative z-10">
+                            <h3 className="text-2xl font-bold text-white mb-4">გჭირდებათ დახმარება?</h3>
+                            <p className="text-slate-300 mb-6">ჩვენ გაგიწევთ სრულ პროფესიონალურ მომსახურებას ნებისმიერი სირთულის საგზაო მოძრაობის სქემის მომზადებასა და შეთანხმებაში.</p>
+                            <Link
+                                href={`/${lang}/contact`}
+                                className="inline-flex justify-center items-center px-8 py-3 text-base font-bold rounded-md bg-amber-500 text-slate-900 hover:bg-amber-400 transition-colors shadow-lg"
+                            >
+                                დაგვიკავშირდით უფასო კონსულტაციისთვის
+                            </Link>
+                        </div>
                     </footer>
 
                 </article>

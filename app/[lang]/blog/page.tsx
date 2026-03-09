@@ -42,7 +42,7 @@ export default async function BlogIndex({
     const dict = await getDictionary(lang as any);
 
     return (
-        <div className="bg-[var(--color-background)] min-h-screen py-16">
+        <div className="bg-slate-50 min-h-screen py-16 border-t border-slate-200">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div className="text-center mb-16">
@@ -56,9 +56,9 @@ export default async function BlogIndex({
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                     {blogPosts.map((post) => (
                         <Link href={`/${lang}/blog/${post.slug}`} key={post.slug} className="block group">
-                            <article className="bg-slate-50 rounded-xl shadow-sm border border-gray-100 p-8 h-full hover:shadow-md transition-all group-hover:border-[var(--color-primary)]/30">
+                            <article className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 h-full hover:shadow-xl hover:-translate-y-1 transition-all group-hover:border-amber-400">
                                 <div className="flex items-center justify-between mb-4">
-                                    <span className="text-sm font-medium text-[var(--color-primary)] bg-[var(--color-primary)]/10 px-3 py-1 rounded-full">
+                                    <span className="text-sm font-bold text-slate-800 bg-amber-200/50 px-3 py-1 rounded-full border border-amber-300">
                                         {post.keyword}
                                     </span>
                                     <time className="text-sm text-gray-500">{post.date}</time>
@@ -66,11 +66,11 @@ export default async function BlogIndex({
                                 <h2 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[var(--color-primary)] transition-colors">
                                     {post.title}
                                 </h2>
-                                <p className="text-gray-600 mb-6">
+                                <p className="text-slate-600 mb-6 flex-grow">
                                     {post.excerpt}
                                 </p>
-                                <span className="text-[var(--color-primary)] font-semibold inline-flex items-center">
-                                    სრულად წაკითხვა →
+                                <span className="text-amber-600 font-bold inline-flex items-center group-hover:text-amber-500 transition-colors">
+                                    სრულად წაკითხვა <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
                                 </span>
                             </article>
                         </Link>

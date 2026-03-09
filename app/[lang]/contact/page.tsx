@@ -10,7 +10,7 @@ export default async function Contact({
     const dict = await getDictionary(lang as any);
 
     return (
-        <div className="bg-[var(--color-background)] min-h-screen py-16">
+        <div className="bg-slate-50 min-h-screen py-16 border-t border-slate-200">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div className="text-center mb-16">
@@ -24,9 +24,9 @@ export default async function Contact({
                     <div className="space-y-6">
                         <h2 className="text-2xl font-bold text-gray-900 mb-6">საკონტაქტო ინფორმაცია</h2>
 
-                        <a href="tel:+995591959607" className="flex items-center p-6 bg-slate-50 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
-                            <div className="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-[var(--color-primary)] transition-colors">
-                                <Phone className="w-6 h-6 text-[var(--color-primary)] group-hover:text-white transition-colors" />
+                        <a href="tel:+995591959607" className="flex items-center p-6 bg-white rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all group">
+                            <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-[var(--color-primary)] transition-colors">
+                                <Phone className="w-6 h-6 text-[var(--color-primary)] group-hover:text-amber-500 transition-colors" />
                             </div>
                             <div className="ml-6">
                                 <p className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-1">ტელეფონი</p>
@@ -34,8 +34,8 @@ export default async function Contact({
                             </div>
                         </a>
 
-                        <a href="https://wa.me/995591959607" target="_blank" rel="noopener noreferrer" className="flex items-center p-6 bg-slate-50 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
-                            <div className="w-14 h-14 bg-[#25D366]/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-[#25D366] transition-colors">
+                        <a href="https://wa.me/995591959607" target="_blank" rel="noopener noreferrer" className="flex items-center p-6 bg-white rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all group">
+                            <div className="w-14 h-14 bg-[#25D366]/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#25D366] transition-colors">
                                 <MessageCircle className="w-6 h-6 text-[#25D366] group-hover:text-white transition-colors" />
                             </div>
                             <div className="ml-6">
@@ -44,9 +44,9 @@ export default async function Contact({
                             </div>
                         </a>
 
-                        <a href="mailto:zarqua.g1996@gmail.com" className="flex items-center p-6 bg-slate-50 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
-                            <div className="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-[var(--color-primary)] transition-colors">
-                                <Mail className="w-6 h-6 text-[var(--color-primary)] group-hover:text-white transition-colors" />
+                        <a href="mailto:zarqua.g1996@gmail.com" className="flex items-center p-6 bg-white rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all group">
+                            <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-[var(--color-primary)] transition-colors">
+                                <Mail className="w-6 h-6 text-[var(--color-primary)] group-hover:text-amber-500 transition-colors" />
                             </div>
                             <div className="ml-6">
                                 <p className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-1">ელ-ფოსტა</p>
@@ -54,8 +54,8 @@ export default async function Contact({
                             </div>
                         </a>
 
-                        <div className="flex items-center p-6 bg-slate-50 rounded-xl shadow-sm border border-gray-100">
-                            <div className="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center flex-shrink-0">
+                        <div className="flex items-center p-6 bg-white rounded-2xl shadow-sm border border-slate-200">
+                            <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
                                 <MapPin className="w-6 h-6 text-[var(--color-primary)]" />
                             </div>
                             <div className="ml-6">
@@ -67,8 +67,11 @@ export default async function Contact({
                     </div>
 
                     {/* Contact Form Placeholder */}
-                    <div className="bg-slate-50 rounded-xl shadow-sm border border-gray-100 p-8">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-6">მოგვწერეთ</h2>
+                    <div className="bg-white rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-200 p-8 md:p-10">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-8 relative inline-block">
+                            მოგვწერეთ
+                            <span className="absolute -bottom-2 left-0 w-1/3 h-1 bg-amber-500 rounded"></span>
+                        </h2>
                         <form className="space-y-6">
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">სახელი და გვარი</label>
@@ -82,7 +85,7 @@ export default async function Contact({
                                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">შეტყობინება</label>
                                 <textarea id="message" rows={4} className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent outline-none transition-all" placeholder="დაწერეთ თქვენი პროექტის მოკლე აღწერა..."></textarea>
                             </div>
-                            <button type="button" className="w-full bg-[var(--color-primary)] text-white font-bold py-3 px-4 rounded-md hover:bg-[var(--color-primary-dark)] transition-colors">
+                            <button type="button" className="w-full bg-[var(--color-primary)] text-white font-bold py-4 px-4 rounded-xl hover:bg-[var(--color-primary-dark)] transition-colors shadow-md">
                                 გაგზავნა
                             </button>
                         </form>

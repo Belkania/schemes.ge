@@ -13,7 +13,7 @@ export default async function Home({
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-[var(--color-primary)] text-white py-20 lg:py-32 overflow-hidden">
+      <section className="relative bg-slate-900 border-b-4 border-amber-500 text-white py-20 lg:py-32 overflow-hidden shadow-2xl">
         <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1574340321262-d48e8a6daea7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
@@ -43,9 +43,10 @@ export default async function Home({
       </section>
 
       {/* Credibility / Why Choose Us Section */}
-      <section className="py-16 bg-[var(--color-background)]">
+      <section className="py-16 bg-white relative">
+        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center border-b border-gray-100 pb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center pb-16">
             <div className="p-6">
               <div className="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-4">
                 <ShieldCheck className="w-8 h-8 text-[var(--color-primary)]" />
@@ -72,7 +73,7 @@ export default async function Home({
       </section>
 
       {/* Quick Services Overview */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-slate-50 border-t border-slate-200 shadow-[inset_0_4px_6px_rgba(0,0,0,0.02)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{dict.navigation.services}</h2>
@@ -88,8 +89,8 @@ export default async function Home({
               "კონსულტაცია პროექტირების საკითხებში",
               "სამშენებლო ტექნიკის მოძრაობის სქემები"
             ].map((service, index) => (
-              <div key={index} className="bg-slate-50 p-6 rounded-lg shadow-sm border border-gray-100 flex items-start">
-                <CheckCircle className="w-6 h-6 text-[var(--color-primary)] mt-1 mr-4 flex-shrink-0" />
+              <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 border border-slate-200 transition-all duration-300 flex items-start group">
+                <CheckCircle className="w-6 h-6 text-amber-500 mt-1 mr-4 flex-shrink-0 group-hover:scale-110 transition-transform" />
                 <span className="text-gray-800 font-medium">{service}</span>
               </div>
             ))}

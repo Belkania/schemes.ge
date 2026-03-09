@@ -53,7 +53,7 @@ export default async function Services({
     ];
 
     return (
-        <div className="bg-[var(--color-background)] min-h-screen py-16">
+        <div className="bg-slate-50 min-h-screen py-16 border-t border-slate-200">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div className="text-center mb-16">
@@ -66,27 +66,33 @@ export default async function Services({
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                     {services.map((service, idx) => (
-                        <div key={idx} className="bg-gray-50 rounded-xl p-8 border border-gray-100 hover:shadow-md transition-shadow">
-                            <div className="w-16 h-16 bg-slate-50 rounded-lg shadow-sm flex items-center justify-center mb-6">
-                                {service.icon}
+                        <div key={idx} className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 hover:shadow-xl hover:-translate-y-2 group transition-all duration-300">
+                            <div className="w-16 h-16 bg-blue-50 group-hover:bg-[var(--color-primary)] rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
+                                <div className="text-[var(--color-primary)] group-hover:text-emerald-400 mix-blend-luminosity">
+                                    {service.icon}
+                                </div>
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                            <p className="text-gray-600">{service.desc}</p>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[var(--color-primary)] transition-colors">{service.title}</h3>
+                            <p className="text-slate-600">{service.desc}</p>
                         </div>
                     ))}
                 </div>
 
-                <div className="bg-[var(--color-primary)] rounded-2xl p-8 md:p-12 text-center text-white">
-                    <h2 className="text-2xl sm:text-3xl font-bold mb-4">გჭირდებათ პროექტის შეთანხმება?</h2>
-                    <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-                        დაგვიკავშირდით და მიიღეთ სრული იურიდიული და ტექნიკური კონსულტაცია საპატრულო პოლიციასთან და თბილისის მუნიციპალიტეტის ტრანსპორტისა და ურბანული განვითარების სააგენტოსთან.
-                    </p>
-                    <a
-                        href={`/${lang}/contact`}
-                        className="inline-flex justify-center items-center px-8 py-4 text-base font-semibold rounded-md bg-[#facc15] text-gray-900 hover:bg-yellow-500 transition-colors"
-                    >
-                        {dict.hero.cta}
-                    </a>
+                <div className="bg-slate-900 rounded-2xl p-8 md:p-12 text-center text-white border-b-4 border-amber-500 shadow-2xl relative overflow-hidden">
+                    <div className="absolute top-0 right-0 -mt-16 -mr-16 w-64 h-64 bg-[var(--color-primary-dark)] rounded-full opacity-20 blur-3xl"></div>
+                    <div className="absolute bottom-0 left-0 -mb-16 -ml-16 w-48 h-48 bg-amber-500 rounded-full opacity-10 blur-3xl"></div>
+                    <div className="relative z-10">
+                        <h2 className="text-2xl sm:text-3xl font-bold mb-4">გჭირდებათ პროექტის შეთანხმება?</h2>
+                        <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+                            დაგვიკავშირდით და მიიღეთ სრული იურიდიული და ტექნიკური კონსულტაცია საპატრულო პოლიციასთან და თბილისის მუნიციპალიტეტის ტრანსპორტისა და ურბანული განვითარების სააგენტოსთან.
+                        </p>
+                        <a
+                            href={`/${lang}/contact`}
+                            className="inline-flex justify-center items-center px-8 py-4 text-base font-semibold rounded-md bg-amber-500 text-slate-900 hover:bg-amber-400 hover:scale-105 transition-all shadow-lg"
+                        >
+                            {dict.hero.cta}
+                        </a>
+                    </div>
                 </div>
 
             </div>

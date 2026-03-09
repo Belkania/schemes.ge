@@ -40,7 +40,7 @@ export default async function Projects({
     ];
 
     return (
-        <div className="bg-[var(--color-background)] min-h-screen py-16">
+        <div className="bg-slate-50 min-h-screen py-16 border-t border-slate-200">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div className="text-center mb-16">
@@ -53,31 +53,31 @@ export default async function Projects({
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                     {projects.map((project) => (
-                        <div key={project.id} className="bg-slate-50 rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition-shadow">
+                        <div key={project.id} className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden group hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
 
-                            <div className="relative h-60 w-full overflow-hidden bg-gray-200">
+                            <div className="relative h-64 w-full overflow-hidden bg-slate-200">
                                 {/* Image Placeholder */}
                                 <div
                                     className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
                                     style={{ backgroundImage: `url(${project.image})` }}
                                 />
                                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
-                                <div className="absolute top-4 left-4">
-                                    <span className="bg-[#facc15] text-gray-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-sm">
+                                <div className="absolute top-4 left-4 z-10">
+                                    <span className="bg-amber-500 text-slate-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-md">
                                         {project.category}
                                     </span>
                                 </div>
                             </div>
 
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2">{project.title}</h3>
+                            <div className="p-8 flex flex-col flex-grow">
+                                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-[var(--color-primary)] transition-colors">{project.title}</h3>
 
                                 <div className="flex items-center text-gray-500 mb-6 text-sm">
                                     <MapPin className="w-4 h-4 mr-1 flex-shrink-0" />
                                     <span>{project.location}</span>
                                 </div>
 
-                                <div className="pt-4 border-t border-gray-100">
+                                <div className="pt-5 mt-auto border-t border-slate-100">
                                     <a
                                         href={project.pdfUrl}
                                         className="flex justify-between items-center text-[var(--color-primary)] font-semibold hover:text-[var(--color-primary-dark)] transition-colors group/link"
@@ -94,17 +94,21 @@ export default async function Projects({
                     ))}
                 </div>
 
-                <div className="bg-[var(--color-primary)] rounded-2xl p-8 md:p-12 text-center text-white">
-                    <h2 className="text-2xl sm:text-3xl font-bold mb-4">დაიწყეთ თქვენი პროექტი დღესვე</h2>
-                    <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-                        ჩვენ დაგეხმარებით საგზაო მოძრაობის სქემების უმოკლეს ვადებში მომზადებასა და შეთანხმებაში შესაბამის სამსახურებთან.
-                    </p>
-                    <Link
-                        href={`/${lang}/contact`}
-                        className="inline-flex justify-center items-center px-8 py-4 text-base font-semibold rounded-md bg-[#facc15] text-gray-900 hover:bg-yellow-500 transition-colors"
-                    >
-                        {dict.hero.cta}
-                    </Link>
+                <div className="bg-slate-900 rounded-2xl p-8 md:p-12 text-center text-white border-b-4 border-amber-500 shadow-2xl relative overflow-hidden">
+                    <div className="absolute top-0 right-0 -mt-16 -mr-16 w-64 h-64 bg-[var(--color-primary-dark)] rounded-full opacity-20 blur-3xl"></div>
+                    <div className="absolute bottom-0 left-0 -mb-16 -ml-16 w-48 h-48 bg-amber-500 rounded-full opacity-10 blur-3xl"></div>
+                    <div className="relative z-10">
+                        <h2 className="text-2xl sm:text-3xl font-bold mb-4">დაიწყეთ თქვენი პროექტი დღესვე</h2>
+                        <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+                            ჩვენ დაგეხმარებით საგზაო მოძრაობის სქემების უმოკლეს ვადებში მომზადებასა და შეთანხმებაში შესაბამის სამსახურებთან.
+                        </p>
+                        <Link
+                            href={`/${lang}/contact`}
+                            className="inline-flex justify-center items-center px-8 py-4 text-base font-semibold rounded-md bg-amber-500 text-slate-900 hover:bg-amber-400 hover:scale-105 transition-all shadow-lg"
+                        >
+                            {dict.hero.cta}
+                        </Link>
+                    </div>
                 </div>
 
             </div>
