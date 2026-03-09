@@ -116,7 +116,7 @@ export const blogData: Record<string, Record<string, BlogPost>> = {
             content: (
                 <>
                     <p className="text-lg leading-relaxed text-gray-700 mb-6">
-                        საქართველოში ნებისმიერი <strong>სატრანსპორტო ორგანიზების სქემა</strong> ფინალურ ეტაპზე მოითხოვს საპატრულო პოლიციასთან შეთანხმებას. ეს პროცესი გულისხმობს დეტალური პაკეტის მომზადებას.
+                        თბილისში ნებისმიერი <strong>სატრანსპორტო ორგანიზების სქემა</strong> ფინალურ ეტაპზე მოითხოვს საპატრულო პოლიციასთან შეთანხმებას. ეს პროცესი გულისხმობს დეტალური პაკეტის მომზადებას.
                     </p>
                     <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">საჭირო დოკუმენტაციის სია:</h2>
                     <div className="bg-white p-6 rounded-2xl mb-8 border border-slate-200 shadow-sm">
@@ -247,7 +247,7 @@ export const blogData: Record<string, Record<string, BlogPost>> = {
             content: (
                 <>
                     <p className="text-lg leading-relaxed text-gray-700 mb-6">
-                        In Georgia, any <strong>transport organization scheme</strong> requires an agreement with the Patrol Police at the final stage.
+                        In Tbilisi, any <strong>transport organization scheme</strong> requires an agreement with the Patrol Police at the final stage.
                     </p>
                     <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">List of Required Documents:</h2>
                     <div className="bg-white p-6 rounded-2xl mb-8 border border-slate-200 shadow-sm">
