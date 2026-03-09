@@ -42,36 +42,6 @@ export default async function Home({
         </div>
       </section>
 
-      {/* Credibility / Why Choose Us Section */}
-      <section className="py-16 bg-white relative">
-        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center pb-16">
-            <div className="p-6">
-              <div className="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-4">
-                <ShieldCheck className="w-8 h-8 text-[var(--color-primary)]" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{dict.home.features[0].title}</h3>
-              <p className="text-gray-600">{dict.home.features[0].desc}</p>
-            </div>
-            <div className="p-6">
-              <div className="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-4">
-                <Award className="w-8 h-8 text-[var(--color-primary)]" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{dict.home.features[1].title}</h3>
-              <p className="text-gray-600">{dict.home.features[1].desc}</p>
-            </div>
-            <div className="p-6">
-              <div className="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-4">
-                <Clock className="w-8 h-8 text-[var(--color-primary)]" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{dict.home.features[2].title}</h3>
-              <p className="text-gray-600">{dict.home.features[2].desc}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Quick Services Overview */}
       <section className="py-20 bg-slate-50 border-t border-slate-200 shadow-[inset_0_4px_6px_rgba(0,0,0,0.02)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -99,6 +69,36 @@ export default async function Home({
             >
               {dict.home.viewAllServices} <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Credibility / Why Choose Us Section */}
+      <section className="py-16 bg-white relative">
+        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center pb-16">
+            <div className="p-6">
+              <div className="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                <ShieldCheck className="w-8 h-8 text-[var(--color-primary)]" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{dict.home.features[0].title}</h3>
+              <p className="text-gray-600">{dict.home.features[0].desc}</p>
+            </div>
+            <div className="p-6">
+              <div className="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                <Award className="w-8 h-8 text-[var(--color-primary)]" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{dict.home.features[1].title}</h3>
+              <p className="text-gray-600">{dict.home.features[1].desc}</p>
+            </div>
+            <div className="p-6">
+              <div className="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                <Clock className="w-8 h-8 text-[var(--color-primary)]" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{dict.home.features[2].title}</h3>
+              <p className="text-gray-600">{dict.home.features[2].desc}</p>
+            </div>
           </div>
         </div>
       </section>
