@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #475569;
+  --color-primary-dark: #334155;
+  --color-secondary: #64748b;
+  --color-accent: #eab308;
+  --color-background: #f1f5f9;
+  --color-foreground: #1a202c;
+
+  --font-sans: var(--font-inter), var(--font-noto-georgian), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    line-height: 1.6;
+  }
+}
+
+.smooth-scroll {
+  scroll-behavior: smooth;
+}

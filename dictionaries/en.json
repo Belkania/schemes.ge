@@ -1,0 +1,22 @@
+{
+    "navigation": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "projects": "Projects",
+        "blog": "Blog",
+        "contact": "Contact"
+    },
+    "hero": {
+        "title": "Traffic Organization Schemes in Georgia",
+        "subtitle": "Professional Planning, Approval, and Safety",
+        "cta": "Contact Us",
+        "secondaryCta": "Our Services"
+    },
+    "contact": {
+        "callUs": "Call Us",
+        "emailUs": "Email Us",
+        "chatWithUs": "Chat on WhatsApp",
+        "address": "Tbilisi, Georgia"
+    }
+}
