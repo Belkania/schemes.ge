@@ -44,13 +44,13 @@ export default async function Contact({
                             </div>
                         </a>
 
-                        <a href="mailto:zarqua.g1996@gmail.com" className="flex items-center p-6 bg-white rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all group">
+                        <a href="mailto:schemes.ge@gmail.com" className="flex items-center p-6 bg-white rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all group">
                             <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-[var(--color-primary)] transition-colors">
                                 <Mail className="w-6 h-6 text-[var(--color-primary)] group-hover:text-amber-500 transition-colors" />
                             </div>
                             <div className="ml-6">
                                 <p className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-1">{dict.contact.email}</p>
-                                <p className="text-lg font-semibold text-gray-900">zarqua.g1996@gmail.com</p>
+                                <p className="text-lg font-semibold text-gray-900">schemes.ge@gmail.com</p>
                             </div>
                         </a>
 

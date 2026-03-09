@@ -44,7 +44,7 @@ export default function Footer({ dict, lang }: { dict: any; lang: string }) {
                             </li>
                             <li className="flex items-center text-gray-600 text-sm">
                                 <Mail className="w-4 h-4 mr-2 text-[var(--color-primary)]" />
-                                <a href="mailto:zarqua.g1996@gmail.com" className="hover:text-[var(--color-primary)] transition-colors">zarqua.g1996@gmail.com</a>
+                                <a href="mailto:schemes.ge@gmail.com" className="hover:text-[var(--color-primary)] transition-colors">schemes.ge@gmail.com</a>
                             </li>
                             <li className="flex items-center text-gray-600 text-sm">
                                 <MapPin className="w-4 h-4 mr-2 text-[var(--color-primary)]" />
