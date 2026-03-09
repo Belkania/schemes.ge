@@ -47,18 +47,19 @@
         ],
         "servicesTitle": "We offer comprehensive design of road infrastructure.",
         "servicesList": [
-            "Preparation of Permanent Traffic Schemes",
-            "Temporary Traffic Routing for Construction",
-            "Drafting of Execution Acts",
-            "Coordination with Municipal Authorities",
-            "Professional Engineering Consultations",
-            "Heavy Machinery Routing Plans"
+            "Preparation of Traffic Organization Schemes",
+            "Final Version of Traffic Organization",
+            "Temporary Entrance-Exit Traffic Organization Scheme",
+            "Temporary Traffic Scheme during Capital Fence Installation",
+            "Temporary Traffic Scheme during Construction Fence Installation",
+            "Temporary Scheme for Construction Equipment Placement",
+            "Temporary Schemes for Water, Sewage, Gas, and Electric Cable Installation"
         ],
         "viewAllServices": "View All Services"
     },
     "about": {
         "title": "Professionalism & Experience",
-        "p1": "We are a specialized engineering team providing the design and approval of road traffic and transport organization schemes throughout Georgia.",
+        "p1": "We are a specialized engineering team providing the design and approval of road traffic and transport organization schemes in Tbilisi.",
         "p2": "Our mission is to ensure the safe, compliant, and efficient planning of road infrastructure for both temporary and permanent urban works.",
         "bullets": [
             "Fast and efficient administrative processing",
@@ -77,36 +78,32 @@
         "ctaDesc": "Contact us today for full legal and technical consultations regarding Patrol Police and Municipal Transport Agency requirements.",
         "list": [
             {
-                "title": "Traffic Scheme Preparation",
+                "title": "Preparation of Traffic Organization Schemes",
                 "desc": "Complete planning and design of permanent and temporary traffic flows."
             },
             {
-                "title": "Temporary Road Routing",
-                "desc": "Safe movement plans for construction and extensive rehabilitation zones."
+                "title": "Final Version of Traffic Organization",
+                "desc": "Preparation and approval of the final, permanent traffic organization scheme."
             },
             {
-                "title": "Construction Acts Preparation",
-                "desc": "Preparation of technical documentation strictly according to City Hall rules."
+                "title": "Temporary Entrance-Exit Traffic Organization Scheme",
+                "desc": "Temporary project for safe vehicle entry and exit at the site."
             },
             {
-                "title": "State Approvals",
-                "desc": "Official coordination directly with the Patrol Police and Transport Agency."
+                "title": "Temporary Traffic Scheme during Capital Fence Installation",
+                "desc": "Scheme to ensure traffic safety during perimeter fencing."
             },
             {
-                "title": "Urban Planning Consulting",
-                "desc": "Expert recommendations on standards, clearances, and modern road safety."
+                "title": "Temporary Traffic Scheme during Construction Fence Installation",
+                "desc": "Project for temporary restrictions required for construction works."
             },
             {
-                "title": "Heavy Machinery Logistics",
-                "desc": "Specialized routing plans for the movement of oversized construction equipment."
+                "title": "Temporary Scheme for Construction Equipment Placement",
+                "desc": "Scheme for the safe placement of cranes and other heavy equipment on the road."
             },
             {
-                "title": "Water Supply Networks",
-                "desc": "Road excavation schemes and authorizations during pipe installation."
-            },
-            {
-                "title": "Sewage Networks Installation",
-                "desc": "Traffic management for urban drainage and sewage rehabilitation."
+                "title": "Temporary Schemes for Water, Sewage, Gas, and Electric Cable Installation",
+                "desc": "Temporary road excavation schemes during the installation of engineering utilities."
             }
         ]
     },

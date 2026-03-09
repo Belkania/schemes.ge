@@ -11,13 +11,12 @@ export default async function Services({
 
     const services = [
         { title: dict.services.list[0].title, desc: dict.services.list[0].desc, icon: <Route className="w-8 h-8" /> },
-        { title: dict.services.list[1].title, desc: dict.services.list[1].desc, icon: <AlertTriangle className="w-8 h-8" /> },
-        { title: dict.services.list[2].title, desc: dict.services.list[2].desc, icon: <FileText className="w-8 h-8" /> },
+        { title: dict.services.list[1].title, desc: dict.services.list[1].desc, icon: <Shield className="w-8 h-8" /> },
+        { title: dict.services.list[2].title, desc: dict.services.list[2].desc, icon: <AlertTriangle className="w-8 h-8" /> },
         { title: dict.services.list[3].title, desc: dict.services.list[3].desc, icon: <Briefcase className="w-8 h-8" /> },
-        { title: dict.services.list[4].title, desc: dict.services.list[4].desc, icon: <Map className="w-8 h-8" /> },
-        { title: dict.services.list[5].title, desc: dict.services.list[5].desc, icon: <Truck className="w-8 h-8" /> },
-        { title: dict.services.list[6].title, desc: dict.services.list[6].desc, icon: <Droplets className="w-8 h-8" /> },
-        { title: dict.services.list[7].title, desc: dict.services.list[7].desc, icon: <Cog className="w-8 h-8" /> }
+        { title: dict.services.list[4].title, desc: dict.services.list[4].desc, icon: <Truck className="w-8 h-8" /> },
+        { title: dict.services.list[5].title, desc: dict.services.list[5].desc, icon: <Cog className="w-8 h-8" /> },
+        { title: dict.services.list[6].title, desc: dict.services.list[6].desc, icon: <Droplets className="w-8 h-8" /> }
     ];
 
     return (
