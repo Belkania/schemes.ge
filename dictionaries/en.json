@@ -1,0 +1,137 @@
+{
+    "navigation": {
+        "home": "Home",
+        "about": "About Us",
+        "services": "Services",
+        "projects": "Projects",
+        "blog": "Blog",
+        "contact": "Contact"
+    },
+    "hero": {
+        "title": "Traffic Management Schemes in Georgia",
+        "subtitle": "Professional Planning, Fast Approvals, and Safety",
+        "cta": "Contact Us",
+        "secondaryCta": "Our Services"
+    },
+    "contact": {
+        "callUs": "Call Us",
+        "emailUs": "Email",
+        "chatWithUs": "WhatsApp",
+        "address": "Tbilisi, Georgia",
+        "title": "Contact Information",
+        "phone": "Phone",
+        "email": "Email",
+        "formTitle": "Send a Message",
+        "nameLabel": "Full Name",
+        "namePlaceholder": "Your Name",
+        "phoneLabel": "Phone Number",
+        "phonePlaceholder": "+995 5XX XX XX XX",
+        "messageLabel": "Message",
+        "messagePlaceholder": "Briefly describe your project...",
+        "submit": "Submit"
+    },
+    "home": {
+        "features": [
+            {
+                "title": "Official Approvals",
+                "desc": "Full legal support and coordination with City Hall and the Patrol Police."
+            },
+            {
+                "title": "Professional Approach",
+                "desc": "Projects developed in strict adherence to ISO standards and local regulations."
+            },
+            {
+                "title": "Nationwide Coverage",
+                "desc": "Serving clients in Tbilisi and all regions of Georgia promptly."
+            }
+        ],
+        "servicesTitle": "We offer comprehensive design of road infrastructure.",
+        "servicesList": [
+            "Preparation of Traffic Organization Schemes",
+            "Final Version of Traffic Organization",
+            "Temporary Entrance-Exit Traffic Organization Scheme",
+            "Temporary Traffic Scheme during Capital Fence Installation",
+            "Temporary Traffic Scheme during Construction Fence Installation",
+            "Temporary Scheme for Construction Equipment Placement",
+            "Temporary Schemes for Water, Sewage, Gas, and Electric Cable Installation"
+        ],
+        "viewAllServices": "View All Services"
+    },
+    "about": {
+        "title": "Professionalism & Experience",
+        "p1": "We are a specialized engineering team providing the design and approval of road traffic and transport organization schemes in Tbilisi.",
+        "p2": "Our mission is to ensure the safe, compliant, and efficient planning of road infrastructure for both temporary and permanent urban works.",
+        "bullets": [
+            "Fast and efficient administrative processing",
+            "Experienced and licensed engineering team"
+        ],
+        "agreementsTitle": "Official Regulatory Approvals",
+        "agreementsDesc": "Every project undergoes full legal and technical validation with the relevant state authorities:",
+        "gov1": "Patrol Police Department",
+        "gov1Desc": "Ministry of Internal Affairs of Georgia",
+        "gov2": "Transport Agency",
+        "gov2Desc": "Transport and Urban Development Agency of Tbilisi"
+    },
+    "services": {
+        "subtitle": "Professional engineering services covering all aspects of road and transport planning.",
+        "ctaTitle": "Need a project approved?",
+        "ctaDesc": "Contact us today for full legal and technical consultations regarding Patrol Police and Municipal Transport Agency requirements.",
+        "list": [
+            {
+                "title": "Preparation of Traffic Organization Schemes",
+                "desc": "Complete planning and design of permanent and temporary traffic flows."
+            },
+            {
+                "title": "Final Version of Traffic Organization",
+                "desc": "Preparation and approval of the final, permanent traffic organization scheme."
+            },
+            {
+                "title": "Temporary Entrance-Exit Traffic Organization Scheme",
+                "desc": "Temporary project for safe vehicle entry and exit at the site."
+            },
+            {
+                "title": "Temporary Traffic Scheme during Capital Fence Installation",
+                "desc": "Scheme to ensure traffic safety during perimeter fencing."
+            },
+            {
+                "title": "Temporary Traffic Scheme during Construction Fence Installation",
+                "desc": "Project for temporary restrictions required for construction works."
+            },
+            {
+                "title": "Temporary Scheme for Construction Equipment Placement",
+                "desc": "Scheme for the safe placement of cranes and other heavy equipment on the road."
+            },
+            {
+                "title": "Temporary Schemes for Water, Sewage, Gas, and Electric Cable Installation",
+                "desc": "Temporary road excavation schemes during the installation of engineering utilities."
+            }
+        ]
+    },
+    "projects": {
+        "subtitle": "Archive of successfully implemented and legally approved projects.",
+        "viewPdf": "View Project PDF",
+        "ctaTitle": "Start your project today",
+        "ctaDesc": "We will help you prepare and agree upon your traffic schemes in the shortest possible timeframe.",
+        "list": [
+            {
+                "title": "Chavchavadze Avenue Rehabilitation",
+                "category": "Temporary Traffic Scheme",
+                "location": "Vake, Tbilisi"
+            },
+            {
+                "title": "Shopping Mall Parking Organization",
+                "category": "Permanent Traffic Scheme",
+                "location": "Saburtalo, Tbilisi"
+            },
+            {
+                "title": "Water Main Restoration Routing",
+                "category": "Construction Execution Act",
+                "location": "Rustavi, Georgia"
+            }
+        ]
+    },
+    "blog": {
+        "subtitle": "News, professional advice, and detailed information on traffic engineering.",
+        "readMore": "Read Full Article"
+    }
+}
