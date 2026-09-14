@@ -21,16 +21,16 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
   const siteInfo = {
     ka: {
-      title: 'სატრანსპორტო სქემები — პროფესიონალური საგზაო სქემების მომზადება',
-      description: 'სატრანსპორტო სქემა — პროფესიონალური მომზადება და ოფიციალური შეთანხმება. დროებითი საგზაო სქემა, სამშენებლო სქემა, შესასვლელ-გამოსასვლელი სქემა. მერიასა და საპატრულო პოლიციასთან შეთანხმება თბილისსა და საქართველოს მასშტაბით. sqemebi.ge',
+      title: 'საგზაო სქემები და სატრანსპორტო სქემა — მომზადება და შეთანხმება',
+      description: 'საგზაო სქემა და სატრანსპორტო სქემები — პროფესიონალური მომზადება და ოფიციალური შეთანხმება თბილისის მერიასა და საპატრულო პოლიციასთან. დროებითი საგზაო სქემა, სამშენებლო სქემა, შესასვლელ-გამოსასვლელი სქემა. sqemebi.ge',
     },
     en: {
-      title: 'Transport Schemes Georgia — Professional Traffic Organization',
-      description: 'Professional transport scheme preparation and official approval with Tbilisi City Hall and Patrol Police. Temporary traffic schemes, construction detour plans, entry/exit schemes across Georgia.',
+      title: 'Road & Transport Schemes Georgia — Professional Traffic Planning',
+      description: 'Professional road and transport scheme preparation and official approval with Tbilisi City Hall and Patrol Police. Temporary traffic schemes, construction detour plans, entry/exit schemes across Georgia.',
     },
     ru: {
-      title: 'Транспортные схемы Грузия — Профессиональная организация движения',
-      description: 'Профессиональная подготовка транспортных схем и согласование с мэрией Тбилиси и патрульной полицией. Временные, строительные схемы и схемы въезда-выезда по всей Грузии.',
+      title: 'Дорожные и транспортные схемы Грузия — Организация движения',
+      description: 'Профессиональная подготовка дорожных и транспортных схем и согласование с мэрией Тбилиси и патрульной полицией. Временные, строительные схемы и схемы въезда-выезда по всей Грузии.',
     }
   };
 
@@ -44,6 +44,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     },
     description: currentInfo.description,
     keywords: lang === 'ka' ? [
+      'საგზაო სქემა',
+      'საგზაო სქემები',
+      'საგზაო სქემის მომზადება',
+      'საგზაო სქემის შეთანხმება',
+      'საგზაო სქემის დამზადება',
+      'საგზაო სქემის ფასი',
       'სატრანსპორტო სქემები',
       'სატრანსპორტო სქემა',
       'საგზაო მოძრაობის ორგანიზება',
@@ -62,6 +68,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       'სატრანსპორტო სქემა თბილისი',
       'სქემა მგეგმარეობელი'
     ] : lang === 'en' ? [
+      'road scheme Georgia',
+      'road traffic schemes',
       'transport schemes Georgia',
       'transport scheme',
       'traffic organization scheme',
@@ -73,6 +81,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       'Tbilisi transport scheme',
       'road traffic scheme Georgia'
     ] : [
+      'дорожная схема Грузия',
+      'дорожные схемы',
       'транспортные схемы Грузия',
       'транспортная схема',
       'схема организации движения',
@@ -147,7 +157,9 @@ export default async function RootLayout({
               "url": "https://www.sqemebi.ge",
               "logo": "https://www.sqemebi.ge/logo-new.png",
               "image": "https://www.sqemebi.ge/og-image.png",
-              "description": "Professional transport scheme preparation and official approval with Tbilisi City Hall and Patrol Police across Georgia.",
+              "description": "Professional transport and road traffic scheme preparation and official approval with Tbilisi City Hall and Patrol Police across Georgia.",
+              "serviceType": ["საგზაო სქემა", "საგზაო სქემები", "სატრანსპორტო სქემები", "საგზაო მოძრაობის ორგანიზება", "დროებითი საგზაო სქემა", "სამშენებლო საგზაო სქემა"],
+              "knowsAbout": ["საგზაო სქემა", "საგზაო სქემები", "სატრანსპორტო სქემები", "Traffic Engineering", "Road Traffic Schemes Georgia"],
               "telephone": "+995591959607",
               "email": "sqemebi.ge@gmail.com",
               "address": {

@@ -26,9 +26,38 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     : `${baseUrl}/${lang}/blog/${slug}`;
 
   const keywordsByLang: Record<string, string[]> = {
-    ka: [post.keyword, 'საგზაო მოძრაობის ორგანიზების სქემები', 'საქართველო', 'თბილისი', 'sqemebi.ge'],
-    en: [post.keyword, 'traffic organization schemes', 'Georgia', 'Tbilisi', 'sqemebi.ge'],
-    ru: [post.keyword, 'схемы организации движения', 'Грузия', 'Тбилиси', 'sqemebi.ge'],
+    ka: [
+      post.keyword,
+      'საგზაო სქემა',
+      'საგზაო სქემები',
+      'საგზაო სქემის მომზადება',
+      'საგზაო სქემის შეთანხმება',
+      'სატრანსპორტო სქემები',
+      'საგზაო მოძრაობის ორგანიზების სქემები',
+      'დროებითი საგზაო სქემა',
+      'სამშენებლო საგზაო სქემა',
+      'საქართველო',
+      'თბილისი',
+      'sqemebi.ge'
+    ],
+    en: [
+      post.keyword,
+      'road traffic scheme',
+      'traffic schemes Georgia',
+      'temporary traffic scheme',
+      'traffic organization schemes',
+      'Tbilisi',
+      'sqemebi.ge'
+    ],
+    ru: [
+      post.keyword,
+      'дорожная схема',
+      'дорожные схемы Грузия',
+      'временная дорожная схема',
+      'схемы организации движения',
+      'Тбилиси',
+      'sqemebi.ge'
+    ],
   };
 
   return {
@@ -101,7 +130,7 @@ export default async function BlogPost({
     ? 'Sqemebi.ge — Инженерная команда'
     : 'Sqemebi.ge — Engineering Team';
 
-  const blogPostSchema = {
+  const blogPostSchema: any = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.title,
@@ -132,11 +161,38 @@ export default async function BlogPost({
     keywords: post.keyword,
   };
 
+  // If this is the pillar post for "საგზაო სქემა", attach FAQ Schema for Rich Snippets
+  const schemaList: any[] = [blogPostSchema];
+  if (slug === 'sagzao-sqema-momzadeba-da-shetanxmeba' && lang === 'ka') {
+    schemaList.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'რა დრო სჭირდება საგზაო სქემის მომზადებას და შეთანხმებას?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'თავად საგზაო სქემის მომზადება ჩვენი გუნდის მიერ ხდება 1-3 სამუშაო დღეში. სახელმწიფო უწყებებში (მერია და საპატრულო პოლიცია) ოფიციალური შეთანხმების ვადა კი შეადგენს საშუალოდ 5-დან 10 სამუშაო დღემდე.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'რა მოხდება, თუ სამუშაოები საგზაო სქემის გარეშე დაიწყება?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'საგზაო სქემისა და შესაბამისი ნებართვის გარეშე გზის სავალი ნაწილის ან ტროტუარის დაკავება იწვევს მძიმე ადმინისტრაციულ ჯარიმებს ზედამხედველობისა და საპატრულო პოლიციის მხრიდან, აგრეთვე სამუშაოების დაუყოვნებლივ იძულებით შეჩერებას.'
+          }
+        }
+      ]
+    });
+  }
+
   return (
     <div className="bg-slate-50 min-h-screen py-10 sm:py-16 lg:py-24 border-t border-slate-200">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaList.length === 1 ? schemaList[0] : schemaList) }}
       />
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white p-5 sm:p-8 lg:p-12 rounded-2xl sm:rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-200">
 

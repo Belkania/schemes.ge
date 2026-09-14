@@ -6,20 +6,38 @@ import type { Metadata } from 'next';
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const { lang } = await params;
     const titles = {
-        ka: 'სატრანსპორტო სქემა — ჩვენი სერვისები',
-        en: 'Transport Schemes — Our Services',
-        ru: 'Транспортные Схемы — Наши Услуги'
+        ka: 'საგზაო სქემა და სატრანსპორტო სქემები — სერვისები | Sqemebi.ge',
+        en: 'Road & Transport Scheme Services — Professional Planning | Sqemebi.ge',
+        ru: 'Дорожные и транспортные схемы — Услуги | Sqemebi.ge'
     };
     const desc = {
-        ka: 'სატრანსპორტო სქემა: დროებითი საგზაო სქემა, სამშენებლო სქემა, შესასვლელ-გამოსასვლელი სქემა, მერიასთან შეთანხმება, შუქნიშნების დაგეგმარება და სხვა. sqemebi.ge',
-        en: 'Transport schemes services: temporary traffic schemes, construction schemes, entry/exit schemes, city hall approval, traffic light planning and more.',
-        ru: 'Транспортные схемы: временные дорожные схемы, строительные схемы, схемы въезда-выезда, согласование с мэрией и планирование светофоров.'
+        ka: 'საგზაო სქემა და სატრანსპორტო სქემები: დროებითი საგზაო სქემა, სამშენებლო სქემა, შესასვლელ-გამოსასვლელი სქემა, მერიასთან და საპატრულოსთან შეთანხმება. sqemebi.ge',
+        en: 'Road traffic schemes and transport services: temporary road schemes, construction plans, entry/exit schemes, municipal approvals across Georgia.',
+        ru: 'Дорожная схема и транспортные схемы: временные дорожные схемы, строительные схемы, схемы въезда-выезда, согласование с мэрией и полицией.'
     };
     const url = lang === 'ka' ? `https://www.sqemebi.ge/services` : `https://www.sqemebi.ge/${lang}/services`;
     
     return {
         title: titles[lang as keyof typeof titles] || titles.ka,
         description: desc[lang as keyof typeof desc] || desc.ka,
+        keywords: lang === 'ka' ? [
+            'საგზაო სქემა',
+            'საგზაო სქემები',
+            'სატრანსპორტო სქემები',
+            'საგზაო სქემის მომზადება',
+            'საგზაო სქემის შეთანხმება',
+            'დროებითი საგზაო სქემა',
+            'სამშენებლო საგზაო სქემა',
+            'შესასვლელ-გამოსასვლელი სქემა',
+            'თბილისი',
+            'საქართველო'
+        ] : [
+            'road traffic schemes',
+            'transport schemes Georgia',
+            'traffic organization scheme',
+            'temporary traffic schemes',
+            'Tbilisi'
+        ],
         alternates: {
             canonical: url,
             languages: {
@@ -32,7 +50,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
             url,
             title: titles[lang as keyof typeof titles] || titles.ka,
             description: desc[lang as keyof typeof desc] || desc.ka,
-            images: [{ url: 'https://www.sqemebi.ge/og-image.png', width: 1200, height: 630, alt: 'Sqemebi.ge — სატრანსპორტო სქემები' }],
+            images: [{ url: 'https://www.sqemebi.ge/og-image.png', width: 1200, height: 630, alt: 'Sqemebi.ge — სატრანსპორტო და საგზაო სქემები' }],
         }
     };
 }
@@ -67,10 +85,10 @@ export default async function Services({
                 <div className="text-center mb-10 sm:mb-16">
                     <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                         {lang === 'ka'
-                            ? 'სატრანსპორტო სქემები — პროფესიონალური საგზაო სქემების მომზადება'
+                            ? 'საგზაო სქემები და სატრანსპორტო სქემა — მომზადება და შეთანხმება'
                             : lang === 'en'
-                            ? 'Transport Scheme Services — Professional Traffic Organization'
-                            : 'Транспортные схемы — Профессиональная организация движения'}
+                            ? 'Road & Transport Scheme Services — Professional Traffic Planning'
+                            : 'Дорожные и транспортные схемы — Профессиональная организация движения'}
                     </h1>
                     <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base lg:text-lg italic px-4">
                         {dict.services.subtitle}

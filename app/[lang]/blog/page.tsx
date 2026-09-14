@@ -6,20 +6,39 @@ import type { Metadata } from 'next';
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const { lang } = await params;
     const titles = {
-        ka: 'ბლოგი | საგზაო მოძრაობის ორგანიზება',
-        en: 'Blog | Traffic Organization',
-        ru: 'Блог | Организация дорожного движения'
+        ka: 'საგზაო სქემა და მოძრაობის ორგანიზება — ბლოგი | Sqemebi.ge',
+        en: 'Road Traffic Schemes & Regulations — Blog | Sqemebi.ge',
+        ru: 'Дорожные схемы и организация движения — Блог | Sqemebi.ge'
     };
     const desc = {
-        ka: 'წაიკითხეთ ჩვენი ბლოგი საგზაო სქემების, უსაფრთხოების და რეგულაციების შესახებ.',
-        en: 'Read our blog about traffic schemes, safety, and regulations.',
-        ru: 'Читайте наш блог о дорожных схемах, безопасности и правилах.'
+        ka: 'საინჟინრო გზამკვლევები და რჩევები: საგზაო სქემა, სატრანსპორტო სქემები, დროებითი და სამშენებლო სქემების მომზადება და შეთანხმება მერიასა და საპატრულო პოლიციასთან.',
+        en: 'Expert engineering articles and guides on road traffic schemes, temporary construction schemes, municipal approvals, and regulations in Georgia.',
+        ru: 'Экспертные статьи и руководства: дорожная схема, согласование в мэрии и патрульной полиции, временные строительные схемы в Грузии.'
     };
     const url = lang === 'ka' ? `https://www.sqemebi.ge/blog` : `https://www.sqemebi.ge/${lang}/blog`;
     
     return {
         title: titles[lang as keyof typeof titles] || titles.ka,
         description: desc[lang as keyof typeof desc] || desc.ka,
+        keywords: lang === 'ka' ? [
+            'საგზაო სქემა',
+            'საგზაო სქემები',
+            'სატრანსპორტო სქემები',
+            'საგზაო სქემის შეთანხმება',
+            'საგზაო სქემის მომზადება',
+            'დროებითი საგზაო სქემა',
+            'სამშენებლო საგზაო სქემა',
+            'საქართველო',
+            'თბილისი',
+            'sqemebi.ge'
+        ] : [
+            'road traffic scheme',
+            'transport schemes Georgia',
+            'traffic organization scheme',
+            'temporary traffic schemes',
+            'Tbilisi',
+            'sqemebi.ge'
+        ],
         alternates: {
             canonical: url,
             languages: {

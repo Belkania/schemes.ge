@@ -11,14 +11,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const baseUrl = 'https://www.sqemebi.ge';
 
   const titles = {
-    ka: 'სატრანსპორტო სქემები — პროფესიონალური საგზაო სქემების მომზადება | Sqemebi.ge',
-    en: 'Transport Schemes Georgia — Professional Traffic Organization | Sqemebi.ge',
-    ru: 'Транспортные схемы Грузия — Профессиональная организация движения | Sqemebi.ge',
+    ka: 'საგზაო სქემები და სატრანსპორტო სქემა — მომზადება და შეთანხმება | Sqemebi.ge',
+    en: 'Road & Transport Schemes Georgia — Professional Traffic Planning | Sqemebi.ge',
+    ru: 'Дорожные и транспортные схемы Грузия — Организация движения | Sqemebi.ge',
   };
   const descriptions = {
-    ka: 'სატრანსპორტო სქემა — პროფესიონალური მომზადება და ოფიციალური შეთანხმება. დროებითი საგზაო სქემა, სამშენებლო სქემა, შესასვლელ-გამოსასვლელი სქემა. მერიასა და საპატრულო პოლიციასთან შეთანხმება. sqemebi.ge',
-    en: 'Professional transport scheme preparation and official approval with Tbilisi City Hall and Patrol Police. Temporary traffic schemes, construction detour plans, entry/exit schemes across Georgia.',
-    ru: 'Профессиональная подготовка транспортных схем и согласование с мэрией Тбилиси и патрульной полицией. Временные, строительные схемы и схемы въезда-выезда по всей Грузии.',
+    ka: 'საგზაო სქემა და სატრანსპორტო სქემები — პროფესიონალური მომზადება და ოფიციალური შეთანხმება თბილისის მერიასა და საპატრულო პოლიციასთან. დროებითი საგზაო სქემა, სამშენებლო სქემა, შესასვლელ-გამოსასვლელი სქემა. sqemebi.ge',
+    en: 'Professional road and transport scheme preparation and official approval with Tbilisi City Hall and Patrol Police. Temporary traffic schemes, construction detour plans, entry/exit schemes across Georgia.',
+    ru: 'Профессиональная подготовка дорожных и транспортных схем и согласование с мэрией Тбилиси и патрульной полицией. Временные, строительные схемы и схемы въезда-выезда по всей Грузии.',
   };
 
   const canonical = lang === 'ka' ? baseUrl : `${baseUrl}/${lang}`;
