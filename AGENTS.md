@@ -77,6 +77,9 @@ This document outlines the architecture, tech stack, development workflow, and c
    - Maintain complete `generateMetadata` exports on pages.
    - Ensure localized OpenGraph images, titles, and descriptions.
 
+5. **Automatic Git Commit & Push**:
+   - Always automatically commit and push all verified changes to Git (`origin main`) upon completing tasks, without waiting for manual prompts.
+
 ---
 
 ## 4. Useful Commands
